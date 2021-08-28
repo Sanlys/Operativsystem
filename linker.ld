@@ -13,7 +13,7 @@ SECTIONS
         *(.rodata)
     }
 
-    .data : 
+    .data :
     {
         start_ctors = .;
         KEEP(*( .init_array ));
@@ -23,7 +23,7 @@ SECTIONS
         *(.data)
     }
 
-    .bss
+    .bss :
     {
         *(.bss)
     }

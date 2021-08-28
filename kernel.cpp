@@ -6,7 +6,7 @@ void print(char* str) {
 	}
 }
 
-void kernelMain(void* multiboot_structure, unsigned int magicnumber) {
+extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber) {
 	print("Kernel test");
 	while(1);
 }
