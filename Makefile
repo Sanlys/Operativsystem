@@ -30,3 +30,7 @@ kernel.iso: kernel.bin
 	echo '}' >> iso/boot/grub/grub.cfg
 	grub-mkrescue --output=$@ iso
 	rm -rf iso
+
+run: kernel.iso
+	(killall VirtualBox && sleep 1) || true
+	VBoxManage startvm Operativsystem &
