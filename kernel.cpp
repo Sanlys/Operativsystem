@@ -24,7 +24,8 @@ extern "C" void kernelMain(void* multiboot_structure, uint32_t magicnumber) {
 	print("Hei", 0x5500, 0, 1);
 	print("Fler", 0xFF00, 0, 2);
 	print("farget tekst", 0x5500, 4, 2);
-	
+	print("> ", 0xFF00, 0, 4);
+
 	GlobalDescriptorTable gdt;
 	
 	while(1);
